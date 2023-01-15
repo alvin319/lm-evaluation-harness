@@ -182,6 +182,7 @@ def evaluate(
                 num_fewshot=num_fewshot,
                 rng=rng,
             )
+            print("CONTEXT", ctx)
             fewshotex_logging_info["doc_id"] = doc["doc_id"]
             args = {"num_fewshot": num_fewshot}
             reqs = task.construct_requests(doc, ctx, args)
